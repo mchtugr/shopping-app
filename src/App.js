@@ -1,12 +1,23 @@
 import React from 'react'
-import CardContainer from './CardContainer'
-import data from './data'
+import { Container } from 'react-bootstrap'
+import { BrowserRouter, Route } from 'react-router-dom'
+import Home from './screens/Home'
+import Cart from './screens/Cart'
+import ProductInfo from './screens/ProductInfo'
+import Header from './components/Header'
 
 const App = () => {
   return (
-    <div>
-      <CardContainer data={data} />
-    </div>
+    <BrowserRouter>
+      <Header />
+      <div>
+        <Container>
+          <Route path='/' component={Home} />
+          <Route path='/cart' component={Cart} />
+          <Route path='/product/:id' component={ProductInfo} />
+        </Container>
+      </div>
+    </BrowserRouter>
   )
 }
 
