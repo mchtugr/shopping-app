@@ -1,9 +1,10 @@
 import React from 'react'
 import { Row, Col } from 'react-bootstrap'
+import { useSelector } from 'react-redux'
 import ProductCard from './ProductCard'
-import data from '../data'
 
 const ProductsShowroom = () => {
+  const data = useSelector((state) => state.products.list)
   return (
     <Row>
       {data.map((item) => (

@@ -20,10 +20,10 @@ const data = [
     id: 2,
     name: 'iPhone SE 64 GB',
     image: [
-      '/img/iphone12-1.jpeg',
-      '/img/iphone12-2.jpeg',
-      '/img/iphone12-3.jpeg',
-      '/img/iphone12-4.jpeg',
+      '/img/iphonese-1.jpeg',
+      '/img/iphonese-2.jpeg',
+      '/img/iphonese-3.jpeg',
+      '/img/iphonese-4.jpeg',
     ],
     description:
       'he second-generation iPhone SE is a smartphone designed and developed by Apple Inc. It is part of the 13th generation of the iPhone, alongside the iPhone 11 and 11 Pro/Pro Max models.',
