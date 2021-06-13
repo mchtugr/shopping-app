@@ -48,5 +48,10 @@ code {
 .demo {
   display: grid;
   grid-template-columns: auto auto;
-  grid-gap: 5%;
+  grid-gap: 2%;
+}
+
+.sort-btn:hover {
+  background-color: #fff;
+  color: orangered;
 }

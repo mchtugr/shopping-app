@@ -4,30 +4,30 @@ import { Button, ButtonGroup } from 'react-bootstrap'
 const SortingSettings = () => {
   return (
     <div className='demo my-3'>
-      <ButtonGroup>
-        <Button type='button' variant='light' className='sorting-button'>
+      <ButtonGroup className='mx-3'>
+        <Button type='button' variant='light' className='sort-btn'>
           Rating
         </Button>
-        <Button type='button' variant='light' className='sorting-button'>
+        <Button type='button' variant='light' className='sort-btn'>
           Asc
         </Button>
-        <Button type='button' variant='light' className='sorting-button'>
+        <Button type='button' variant='light' className='sort-btn'>
           Desc
         </Button>
       </ButtonGroup>
       <ButtonGroup>
-        <Button type='button' variant='light' className='sorting-button'>
+        <Button type='button' variant='light' className='sort-btn'>
           <div className>
             <i className='far fa-square'></i> <i className='far fa-square'></i>
           </div>
         </Button>
-        <Button type='button' variant='light' className='sorting-button'>
+        <Button type='button' variant='light' className='sort-btn'>
           <div className>
             <i className='far fa-square'></i> <i className='far fa-square'></i>{' '}
             <i className='far fa-square'></i>
           </div>
         </Button>
-        <Button type='button' variant='light' className='sorting-button'>
+        <Button type='button' variant='light' className='sort-btn'>
           <div className>
             <i className='far fa-square'></i> <i className='far fa-square'></i>{' '}
             <i className='far fa-square'></i> <i className='far fa-square'></i>
