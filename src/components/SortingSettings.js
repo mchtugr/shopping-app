@@ -17,18 +17,18 @@ const SortingSettings = () => {
       </ButtonGroup>
       <ButtonGroup>
         <Button type='button' variant='light' className='sort-btn'>
-          <div className>
+          <div>
             <i className='far fa-square'></i> <i className='far fa-square'></i>
           </div>
         </Button>
         <Button type='button' variant='light' className='sort-btn'>
-          <div className>
+          <div>
             <i className='far fa-square'></i> <i className='far fa-square'></i>{' '}
             <i className='far fa-square'></i>
           </div>
         </Button>
         <Button type='button' variant='light' className='sort-btn'>
-          <div className>
+          <div>
             <i className='far fa-square'></i> <i className='far fa-square'></i>{' '}
             <i className='far fa-square'></i> <i className='far fa-square'></i>
           </div>

@@ -1,8 +1,7 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Form, Button } from 'react-bootstrap'
 
 const FilterContainer = () => {
-  const [category, setCategory] = useState('')
   const handleSubmit = (e) => {
     e.preventDefault()
     console.log('submitted')
