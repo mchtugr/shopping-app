@@ -29,3 +29,14 @@ code {
   top: 2px;
   left: 22px;
 }
+
+.filter-container {
+  display: block;
+  min-height: 90vh;
+  width: 100%;
+}
+
+.filter-btn-container {
+  display: flex;
+  justify-content: center;
+}
