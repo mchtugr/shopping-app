@@ -55,3 +55,19 @@ code {
   background-color: #fff;
   color: orangered;
 }
+
+.product-card {
+  border: none;
+  display: grid;
+}
+.product-card:hover {
+  border: 1px solid #eee;
+  transform: scale(1.1);
+}
+.product-card-body {
+  display: grid;
+  align-items: flex-start;
+}
+.product-link {
+  text-decoration: none;
+}

@@ -7,7 +7,7 @@ const ProductsShowroom = () => {
   return (
     <Row>
       {data.map((item) => (
-        <Col lg={3} md={4} sm={6} xs={12} className='my-3'>
+        <Col lg={3} md={4} sm={6} xs={12} className='mb-4'>
           <ProductCard item={item} />
         </Col>
       ))}

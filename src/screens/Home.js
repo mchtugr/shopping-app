@@ -7,11 +7,11 @@ import SortingSettings from '../components/SortingSettings'
 
 const Home = () => {
   return (
-    <Row>
-      <Col md={2}>
+    <Row className='m-0'>
+      <Col md={2} className='p-0'>
         <FilterContainer />
       </Col>
-      <Col md={10} className='text-center'>
+      <Col md={10}>
         <SortingSettings />
         <ProductsShowroom />
         <Pagination />

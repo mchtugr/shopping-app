@@ -3,7 +3,7 @@ import { Button, ButtonGroup } from 'react-bootstrap'
 
 const SortingSettings = () => {
   return (
-    <div className='demo my-3'>
+    <div className='demo my-4'>
       <ButtonGroup className='mx-3'>
         <Button type='button' variant='light' className='sort-btn'>
           Rating
