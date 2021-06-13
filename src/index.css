@@ -57,12 +57,12 @@ code {
 }
 
 .product-card {
-  border: none;
+  border-color: #fff;
   display: grid;
 }
 .product-card:hover {
   border: 1px solid #eee;
-  transform: scale(1.1);
+  /* transform: scale(1.1); */
 }
 .product-card-body {
   display: grid;
@@ -70,4 +70,23 @@ code {
 }
 .product-link {
   text-decoration: none;
+}
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+  filter: invert(50%);
+}
+
+.carousel-indicators li {
+  position: relative;
+  top: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+  width: 10px;
+  margin: 10px;
+  margin-top: 40px;
+  height: 10px;
+}
+
+.carousel-indicators .active {
+  background-color: #999;
 }
