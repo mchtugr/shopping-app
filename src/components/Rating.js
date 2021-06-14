@@ -1,8 +1,8 @@
 import React from 'react'
 
-const Rating = ({ value }) => {
+const Rating = ({ value, numOfReviews }) => {
   return (
-    <div>
+    <div className='text-center'>
       <span>
         <i
           style={{ color: 'gold' }}
@@ -62,6 +62,11 @@ const Rating = ({ value }) => {
               : 'far fa-star'
           }
         ></i>
+      </span>
+      <span className='text-secondary review-number'>
+        {' '}
+        {numOfReviews ? numOfReviews : 0}{' '}
+        {numOfReviews > 1 ? 'Reviews' : 'Review'}
       </span>
     </div>
   )
