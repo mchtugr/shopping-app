@@ -31,7 +31,7 @@ const ProductCard = ({ item }) => {
       </Carousel>
       <Link to={`/product/${item.id}`} className='product-link'>
         <Card.Body className='product-card-body'>
-          <Rating value={item.rating} />
+          <Rating value={item.rating} numOfReviews={item.numOfReviews} />
           <Card.Text>{item.name}</Card.Text>
           <Card.Title>$ {item.price}</Card.Title>
         </Card.Body>

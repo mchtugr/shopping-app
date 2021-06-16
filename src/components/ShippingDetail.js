@@ -6,11 +6,11 @@ const ShippingDetail = ({ type }) => {
     <div className='text-center mt-3'>
       {type === 'fast' ? (
         <span>
-          <i class='fas fa-shipping-fast'></i> Fast Shipping
+          <i className='fas fa-shipping-fast'></i> Fast Shipping
         </span>
       ) : (
         <span>
-          <i class='fas fa-truck'></i> Standard Shipping
+          <i className='fas fa-truck'></i> Standard Shipping
         </span>
       )}{' '}
       <OverlayTrigger

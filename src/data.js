@@ -11,10 +11,12 @@ const data = [
     description:
       'The iPhone 12 features a 6.1-inch (15 cm) display with Super Retina XDR OLED technology at a resolution of 2532×1170 pixels and a pixel density of about 460 ppi. The iPhone 12 Mini features a 5.4-inch (14 cm) display with the same technology at a resolution of 2340×1080 pixels and a pixel density of about 476 ppi.',
     brand: 'Apple',
-    category: 'Smart Phones',
+    category: 'smartphone',
     price: 729,
     countInStock: 5,
     rating: 4.7,
+    numOfReviews: 5,
+    shippingType: 'fast',
   },
   {
     id: 2,
@@ -28,10 +30,12 @@ const data = [
     description:
       'he second-generation iPhone SE is a smartphone designed and developed by Apple Inc. It is part of the 13th generation of the iPhone, alongside the iPhone 11 and 11 Pro/Pro Max models.',
     brand: 'Apple',
-    category: 'Smart Phones',
+    category: 'smartphone',
     price: 359,
     countInStock: 7,
     rating: 4.3,
+    numOfReviews: 45,
+    shippingType: 'fast',
   },
   {
     id: 3,
@@ -45,10 +49,12 @@ const data = [
     description:
       'Samsung Galaxy S20 Plus is released in Feb 2020 and comes in a dimension of 161.9 x 73.7 x 7.8 mm and it weighs 186 grams. The screen is a Dynamic AMOLED 2X capacitive touchscreen, which has a size of 6.7 inches.',
     brand: 'Samsung',
-    category: 'Smart Phones',
+    category: 'smartphone',
     price: 750,
     countInStock: 10,
     rating: 4.6,
+    numOfReviews: 45,
+    shippingType: 'fast',
   },
   {
     id: 4,
@@ -62,10 +68,12 @@ const data = [
     description:
       "The Samsung Galaxy S21 Ultra 5G is the company's most premium smartphone yet, with a strong focus on cameras. Just like the Galaxy S20 Ultra, this new model boasts of 100X “space zoom” and 8K video recording, but with an improved shooting experience and even better image quality.",
     brand: 'Samsung',
-    category: 'Smart Phones',
+    category: 'smartphone',
     price: 999,
     countInStock: 3,
     rating: 4.9,
+    numOfReviews: 45,
+    shippingType: 'fast',
   },
   {
     id: 5,
@@ -79,10 +87,12 @@ const data = [
     description:
       'The phone comes with a 6.50-inch touchscreen display with a resolution of 720x1600 pixels. Samsung Galaxy A21s is powered by a 2GHz octa-core Samsung Exynos 850 processor. It comes with 4GB of RAM. The Samsung Galaxy A21s runs Android 10 and is powered by a 5000mAh non-removable battery.',
     brand: 'Samsung',
-    category: 'Smart Phones',
+    category: 'smartphone',
     price: 450,
     countInStock: 6,
     rating: 3.4,
+    numOfReviews: 45,
+    shippingType: 'fast',
   },
   {
     id: 6,
@@ -96,10 +106,12 @@ const data = [
     description:
       'The Samsung Galaxy A51 is an Android smartphone manufactured by Samsung Electronics as part of its Galaxy A series. It was announced and released in December 2019. The phone has a Super AMOLED FHD+ 6.5 in display, a 48 MP wide, 12 MP ultrawide, 5 MP depth, and 5 MP macro camera, a 4000 mAh battery, and an optical in-screen fingerprint sensor.',
     brand: 'Samsung',
-    category: 'Smart Phones',
+    category: 'smartphone',
     price: 570,
     countInStock: 8,
     rating: 3.9,
+    numOfReviews: 45,
+    shippingType: 'fast',
   },
   {
     id: 7,
@@ -113,10 +125,12 @@ const data = [
     description:
       'The phone comes with a 6.20-inch touchscreen display with a resolution of 1440x3200 pixels and an aspect ratio of 20:9. Samsung Galaxy S20 is powered by a 2GHz octa-core Samsung Exynos 990 processor that features 2 cores clocked at 2.73GHz, 2 cores clocked at 2.5GHz and 4 cores clocked at 2GHz. It comes with 8GB of RAM. The Samsung Galaxy S20 runs Android 10 and is powered by a 4000mAh non-removable battery. The Samsung Galaxy S20 supports wireless charging, as well as proprietary fast charging.',
     brand: 'Samsung',
-    category: 'Smart Phones',
+    category: 'smartphone',
     price: 800,
     countInStock: 15,
     rating: 4.3,
+    numOfReviews: 45,
+    shippingType: 'fast',
   },
   {
     id: 8,
@@ -130,10 +144,12 @@ const data = [
     description:
       'Samsung has equipped the Galaxy M31 with an Exynos 9611 SoC and gets 6GB of RAM. It has two storage variants to choose from, 64GB and 128GB. The Galaxy M31 is a dual SIM device with support for 4G as well as VoLTE. It runs Samsung OneUI 2.0 on top of Android 10.',
     brand: 'Samsung',
-    category: 'Smart Phones',
+    category: 'smartphone',
     price: 550,
     countInStock: 10,
     rating: 3.9,
+    numOfReviews: 45,
+    shippingType: 'fast',
   },
   {
     id: 9,
@@ -147,10 +163,12 @@ const data = [
     description:
       'Xiaomi Redmi 9C smartphone runs on Android v10 (Q) operating system. The phone is powered by Octa core, 2.3 GHz, Cortex A53 processor. It runs on the MediaTek Helio G35 Chipset. It has 2 GB RAM and 32 GB internal storage.',
     brand: 'Xiaomi',
-    category: 'Smart Phones',
+    category: 'smartphone',
     price: 250,
     countInStock: 12,
     rating: 3.7,
+    numOfReviews: 45,
+    shippingType: 'fast',
   },
   {
     id: 10,
@@ -164,10 +182,12 @@ const data = [
     description:
       'The display of the smartphone has a 144Hz refresh rate with an OLED screen type. The device is powered by Qualcomm Snapdragon 865 SoC or the Snapdragon 865 Plus chipset. The pro model consists of a 108 MP sensor on the rear side and fueled with a 5,000 mAh battery that will support fast charging.',
     brand: 'Xiaomi',
-    category: 'Smart Phones',
+    category: 'smartphone',
     price: 650,
     countInStock: 7,
     rating: 4.2,
+    numOfReviews: 45,
+    shippingType: 'fast',
   },
   {
     id: 11,
@@ -181,10 +201,12 @@ const data = [
     description:
       'Xiaomi Redmi Note 8 Pro is powered by the Mediatek Helio G90T, Octa-core (2x Cortex-A76 + 6x Cortex-A55) processor. The smartphone comes with a 6.53 inches IPS LCD and 1080 x 2340 pixels resolution. The screen of the device is protected by Corning Gorilla Glass 5.',
     brand: 'Xiaomi',
-    category: 'Smart Phones',
+    category: 'smartphone',
     price: 300,
     countInStock: 6,
     rating: 3.9,
+    numOfReviews: 45,
+    shippingType: 'fast',
   },
   {
     id: 12,
@@ -198,10 +220,12 @@ const data = [
     description:
       'The phone comes with a 6.47-inch touchscreen display with a resolution of 1080x2340 pixels. Xiaomi Mi Note 10 is powered by a 2.2GHz octa-core Qualcomm Snapdragon 730G processor. It comes with 6GB of RAM. The Xiaomi Mi Note 10 runs Android 9 and is powered by a 5260mAh non-removable battery. The Xiaomi Mi Note 10 supports proprietary fast charging.',
     brand: 'Xiaomi',
-    category: 'Smart Phones',
+    category: 'smartphone',
     price: 375,
     countInStock: 9,
     rating: 4,
+    numOfReviews: 45,
+    shippingType: 'fast',
   },
   {
     id: 13,
@@ -215,10 +239,12 @@ const data = [
     description:
       'Xiaomi Redmi Note 7 is powered by the Qualcomm SDM660 Snapdragon 660 Octa-core (4×2.2 GHz Kryo 260 + 4×1.8 GHz Kryo 260) processor. The smartphone comes with a 6.3 inches IPS LCD capacitive touchscreen and 1080 x 2340 pixels resolution. The screen of the device is protected by Corning Gorilla Glass 5. The rear camera consists of a 48 MP (wide) + 5 MP depth sensor or 12 MP (wide) + 2 MP depth sensor lenses.',
     brand: 'Xiaomi',
-    category: 'Smart Phones',
+    category: 'smartphone',
     price: 300,
     countInStock: 6,
     rating: 3.9,
+    numOfReviews: 45,
+    shippingType: 'fast',
   },
   {
     id: 14,
@@ -232,10 +258,12 @@ const data = [
     description:
       'The phone comes with a 6.53-inch touchscreen display with a resolution of 1080x2340 pixels and an aspect ratio of 19.5:9.Redmi 9T comes with 4GB of RAM. The Redmi 9T runs Android 10 and is powered by a 6000mAh battery. The Redmi 9T supports proprietary fast charging.',
     brand: 'Xiaomi',
-    category: 'Smart Phones',
+    category: 'smartphone',
     price: 300,
     countInStock: 7,
     rating: 3.8,
+    numOfReviews: 45,
+    shippingType: 'fast',
   },
   {
     id: 15,
@@ -249,10 +277,12 @@ const data = [
     description:
       'The phone comes with a 6.47-inch touchscreen display with a resolution of 1080x2340 pixels. Xiaomi Mi Note 10 Lite is powered by a 2.2GHz octa-core Qualcomm Snapdragon 730G processor. It comes with 6GB of RAM. The Xiaomi Mi Note 10 Lite runs Android 10 and is powered by a 5260mAh non-removable battery. The Xiaomi Mi Note 10 Lite supports proprietary fast charging.',
     brand: 'Xiaomi',
-    category: 'Smart Phones',
+    category: 'smartphone',
     price: 675,
     countInStock: 11,
     rating: 4.1,
+    numOfReviews: 45,
+    shippingType: 'fast',
   },
   {
     id: 16,
@@ -266,10 +296,12 @@ const data = [
     description:
       'The phone comes with a 6.39-inch touchscreen display with a resolution of 1080x2340 pixels and an aspect ratio of 19.5:9. Mi 9T is powered by a 1.8GHz octa-core Qualcomm Snapdragon 730 processor that features 6 cores clocked at 1.8GHz and 2 cores clocked at 2.2GHz. It comes with 6GB of RAM. The Mi 9T runs Android Pie and is powered by a 4000mAh battery. The Mi 9T supports proprietary fast charging.',
     brand: 'Xiaomi',
-    category: 'Smart Phones',
+    category: 'smartphone',
     price: 400,
     countInStock: 7,
     rating: 4.3,
+    numOfReviews: 45,
+    shippingType: 'fast',
   },
 ]
 

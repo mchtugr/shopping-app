@@ -8,10 +8,10 @@ import SortingSettings from '../components/SortingSettings'
 const Home = () => {
   return (
     <Row className='m-0'>
-      <Col md={2} className='p-0'>
+      <Col md={3} className='p-0'>
         <FilterContainer />
       </Col>
-      <Col md={10}>
+      <Col md={9}>
         <SortingSettings />
         <ProductsShowroom />
         <Pagination />

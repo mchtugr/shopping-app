@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux'
 import ProductCard from './ProductCard'
 
 const ProductsShowroom = () => {
-  const data = useSelector((state) => state.products.list)
+  const data = useSelector((state) => state.products.filteredProducts)
   return (
     <Row>
       {data.map((item) => (
