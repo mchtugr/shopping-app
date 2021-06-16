@@ -6,6 +6,7 @@ import {
   REMOVE_BRAND_FILTER,
   REMOVE_CATEGORY_FILTER,
   REMOVE_PRICE_FILTER,
+  SELECT_SORT_TYPE,
 } from '../constants'
 
 export const addCategoryFilter = (filter) => {
@@ -52,4 +53,8 @@ export const removePriceFilter = (filter) => {
 
 export const filterProducts = (list) => {
   return { type: FILTER_PRODUCTS, payload: list }
+}
+
+export const selectSortType = (value) => {
+  return { type: SELECT_SORT_TYPE, payload: value }
 }

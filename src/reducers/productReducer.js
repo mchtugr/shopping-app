@@ -4,6 +4,7 @@ import {
   FILTER_PRODUCTS,
   REMOVE_BRAND_FILTER,
   REMOVE_CATEGORY_FILTER,
+  SELECT_SORT_TYPE,
 } from '../constants'
 import data from '../data'
 
@@ -36,6 +37,8 @@ const productReducer = (state = initialState, action) => {
       return { ...state, brandFilter }
     case FILTER_PRODUCTS:
       return { ...state, filteredProducts: action.payload }
+    case SELECT_SORT_TYPE:
+      return { ...state, sortType: action.payload }
     default:
       return state
   }
