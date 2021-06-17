@@ -1,6 +1,7 @@
 import {
   ADD_BRAND_FILTER,
   ADD_CATEGORY_FILTER,
+  CHANGE_COLUMN_SIZE,
   FILTER_PRODUCTS,
   REMOVE_BRAND_FILTER,
   REMOVE_CATEGORY_FILTER,
@@ -14,6 +15,7 @@ const initialState = {
   brandFilter: [],
   priceFilter: [],
   filteredProducts: data,
+  colSize: 3,
 }
 
 const productReducer = (state = initialState, action) => {
@@ -39,6 +41,8 @@ const productReducer = (state = initialState, action) => {
       return { ...state, filteredProducts: action.payload }
     case SELECT_SORT_TYPE:
       return { ...state, sortType: action.payload }
+    case CHANGE_COLUMN_SIZE:
+      return { ...state, colSize: action.payload }
     default:
       return state
   }

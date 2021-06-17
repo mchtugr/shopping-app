@@ -6,7 +6,7 @@ import ProductCard from './ProductCard'
 const ProductsShowroom = () => {
   const data = useSelector((state) => state.products.filteredProducts)
   const sortType = useSelector((state) => state.products.sortType)
-
+  const colSize = useSelector((state) => state.products.colSize)
   switch (sortType) {
     case 'rating':
       data.sort((a, b) => b.rating - a.rating)
@@ -28,7 +28,7 @@ const ProductsShowroom = () => {
   return (
     <Row>
       {data.map((item) => (
-        <Col lg={3} md={4} sm={6} xs={12} className='mb-4' key={item.id}>
+        <Col lg={colSize} md={4} sm={6} xs={12} className='mb-4' key={item.id}>
           <ProductCard item={item} />
         </Col>
       ))}

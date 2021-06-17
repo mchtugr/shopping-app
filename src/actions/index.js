@@ -2,6 +2,7 @@ import {
   ADD_BRAND_FILTER,
   ADD_CATEGORY_FILTER,
   ADD_PRICE_FILTER,
+  CHANGE_COLUMN_SIZE,
   FILTER_PRODUCTS,
   REMOVE_BRAND_FILTER,
   REMOVE_CATEGORY_FILTER,
@@ -57,4 +58,8 @@ export const filterProducts = (list) => {
 
 export const selectSortType = (value) => {
   return { type: SELECT_SORT_TYPE, payload: value }
+}
+
+export const changeColSize = (value) => {
+  return { type: CHANGE_COLUMN_SIZE, payload: value }
 }

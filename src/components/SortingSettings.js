@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Button, ButtonGroup } from 'react-bootstrap'
 import { useDispatch, useSelector } from 'react-redux'
-import { selectSortType } from '../actions'
+import { changeColSize, selectSortType } from '../actions'
 
 const SortingSettings = () => {
   const dispatch = useDispatch()
@@ -15,6 +15,8 @@ const SortingSettings = () => {
       setSortType(e.target.id)
     }
   }
+
+  const colSize = useSelector((state) => state.products.colSize)
 
   useEffect(() => {
     dispatch(selectSortType(sortType))
@@ -65,18 +67,36 @@ const SortingSettings = () => {
         </Button>
       </ButtonGroup>
       <ButtonGroup>
-        <Button type='button' variant='light' className='sort-btn'>
+        <Button
+          type='button'
+          variant='light'
+          className={`sort-btn ${colSize === 6 && 'mesut'}`}
+          onClick={() => dispatch(changeColSize(6))}
+          onMouseDown={(e) => e.preventDefault()}
+        >
           <div>
             <i className='far fa-square'></i> <i className='far fa-square'></i>
           </div>
         </Button>
-        <Button type='button' variant='light' className='sort-btn'>
+        <Button
+          type='button'
+          variant='light'
+          className={`sort-btn ${colSize === 4 && 'mesut'}`}
+          onClick={() => dispatch(changeColSize(4))}
+          onMouseDown={(e) => e.preventDefault()}
+        >
           <div>
             <i className='far fa-square'></i> <i className='far fa-square'></i>{' '}
             <i className='far fa-square'></i>
           </div>
         </Button>
-        <Button type='button' variant='light' className='sort-btn'>
+        <Button
+          type='button'
+          variant='light'
+          className={`sort-btn ${colSize === 3 && 'mesut'}`}
+          onClick={() => dispatch(changeColSize(3))}
+          onMouseDown={(e) => e.preventDefault()}
+        >
           <div>
             <i className='far fa-square'></i> <i className='far fa-square'></i>{' '}
             <i className='far fa-square'></i> <i className='far fa-square'></i>

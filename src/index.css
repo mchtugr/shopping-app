@@ -51,11 +51,6 @@ code {
   grid-gap: 2%;
 }
 
-.sort-btn:hover {
-  background-color: #fff;
-  color: orangered;
-}
-
 .product-card {
   border-color: #fff;
   display: grid;
@@ -133,7 +128,10 @@ code {
   background-color: #fff;
   color: orangered;
 }
-
+.mesut:hover {
+  background-color: #fff;
+  color: orangered;
+}
 /* .stock-btn {
   cursor: pointer;
   display: inline-block;

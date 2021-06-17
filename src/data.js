@@ -15,7 +15,7 @@ const data = [
     price: 729,
     countInStock: 5,
     rating: 4.7,
-    numOfReviews: 5,
+    numOfReviews: 102,
     shippingType: 'fast',
   },
   {
@@ -34,7 +34,7 @@ const data = [
     price: 359,
     countInStock: 7,
     rating: 4.3,
-    numOfReviews: 45,
+    numOfReviews: 34,
     shippingType: 'fast',
   },
   {
@@ -53,7 +53,7 @@ const data = [
     price: 750,
     countInStock: 10,
     rating: 4.6,
-    numOfReviews: 45,
+    numOfReviews: 53,
     shippingType: 'fast',
   },
   {
@@ -72,7 +72,7 @@ const data = [
     price: 999,
     countInStock: 3,
     rating: 4.9,
-    numOfReviews: 45,
+    numOfReviews: 47,
     shippingType: 'fast',
   },
   {
@@ -91,7 +91,7 @@ const data = [
     price: 450,
     countInStock: 6,
     rating: 3.4,
-    numOfReviews: 45,
+    numOfReviews: 24,
     shippingType: 'fast',
   },
   {
@@ -110,7 +110,7 @@ const data = [
     price: 570,
     countInStock: 8,
     rating: 3.9,
-    numOfReviews: 45,
+    numOfReviews: 22,
     shippingType: 'fast',
   },
   {
@@ -129,7 +129,7 @@ const data = [
     price: 800,
     countInStock: 15,
     rating: 4.3,
-    numOfReviews: 45,
+    numOfReviews: 22,
     shippingType: 'fast',
   },
   {
@@ -148,7 +148,7 @@ const data = [
     price: 550,
     countInStock: 10,
     rating: 3.9,
-    numOfReviews: 45,
+    numOfReviews: 32,
     shippingType: 'fast',
   },
   {
@@ -167,7 +167,7 @@ const data = [
     price: 250,
     countInStock: 12,
     rating: 3.7,
-    numOfReviews: 45,
+    numOfReviews: 17,
     shippingType: 'fast',
   },
   {
@@ -186,7 +186,7 @@ const data = [
     price: 650,
     countInStock: 7,
     rating: 4.2,
-    numOfReviews: 45,
+    numOfReviews: 62,
     shippingType: 'fast',
   },
   {
@@ -205,7 +205,7 @@ const data = [
     price: 300,
     countInStock: 6,
     rating: 3.9,
-    numOfReviews: 45,
+    numOfReviews: 8,
     shippingType: 'fast',
   },
   {
@@ -224,7 +224,7 @@ const data = [
     price: 375,
     countInStock: 9,
     rating: 4,
-    numOfReviews: 45,
+    numOfReviews: 71,
     shippingType: 'fast',
   },
   {
@@ -243,7 +243,7 @@ const data = [
     price: 300,
     countInStock: 6,
     rating: 3.9,
-    numOfReviews: 45,
+    numOfReviews: 27,
     shippingType: 'fast',
   },
   {
@@ -262,7 +262,7 @@ const data = [
     price: 300,
     countInStock: 7,
     rating: 3.8,
-    numOfReviews: 45,
+    numOfReviews: 19,
     shippingType: 'fast',
   },
   {
@@ -281,7 +281,7 @@ const data = [
     price: 675,
     countInStock: 11,
     rating: 4.1,
-    numOfReviews: 45,
+    numOfReviews: 15,
     shippingType: 'fast',
   },
   {
@@ -300,7 +300,7 @@ const data = [
     price: 400,
     countInStock: 7,
     rating: 4.3,
-    numOfReviews: 45,
+    numOfReviews: 14,
     shippingType: 'fast',
   },
 ]
