@@ -1,14 +1,24 @@
 import React, { useState } from 'react'
-import { useSelector } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
 import { Row, Col, Carousel, Button, Form } from 'react-bootstrap'
 import Rating from '../components/Rating'
 import ShippingDetail from '../components/ShippingDetail'
+import { addToCart } from '../actions'
 
-const ProductInfo = ({ match }) => {
+const ProductInfo = ({ match, history }) => {
   const [qty, setQty] = useState(1)
   const data = useSelector((state) => state.products.list)
   const currentData = data.find((i) => i.id === Number(match.params.id))
+  const dispatch = useDispatch()
 
+  const handleCartClick = () => {
+    dispatch(addToCart(currentData, qty))
+  }
+
+  const handleBuyNow = () => {
+    dispatch(addToCart(currentData, qty))
+    history.push('/cart')
+  }
   return (
     <Row className='justify-content-around m-0'>
       <Col md={5}>
@@ -48,13 +58,6 @@ const ProductInfo = ({ match }) => {
             Quantity:
           </Col>
           <Col xs={'auto'}>
-            {/* <span
-              onClick={handleDecrement}
-              className='px-3 stock-btn'
-              disabled={qty === 1}
-            >
-              -
-            </span> */}
             <Form.Control
               type='number'
               value={qty}
@@ -62,18 +65,18 @@ const ProductInfo = ({ match }) => {
               max={currentData.countInStock}
               onChange={(e) => setQty(e.target.value)}
             ></Form.Control>
-            {/* <span className='px-3 mx-2 product-qty'>{qty}</span> */}
-            {/* <span
-              onClick={handleIncrement}
-              className='px-3 stock-btn'
-              disabled={qty === currentData.countInStock}
-            >
-              +
-            </span> */}
           </Col>
         </Row>
         <div className='text-center'>
-          <Button className='m-4'>Add to Cart</Button>
+          <Button className='m-4' onClick={handleCartClick}>
+            <span>
+              <i className='fas fa-shopping-cart'></i>
+            </span>{' '}
+            Add to Cart
+          </Button>
+          <Button variant='success' className='m-4' onClick={handleBuyNow}>
+            Buy Now
+          </Button>
         </div>
       </Col>
     </Row>

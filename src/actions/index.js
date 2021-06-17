@@ -2,6 +2,7 @@ import {
   ADD_BRAND_FILTER,
   ADD_CATEGORY_FILTER,
   ADD_PRICE_FILTER,
+  ADD_TO_CART,
   CHANGE_COLUMN_SIZE,
   FILTER_PRODUCTS,
   REMOVE_BRAND_FILTER,
@@ -62,4 +63,14 @@ export const selectSortType = (value) => {
 
 export const changeColSize = (value) => {
   return { type: CHANGE_COLUMN_SIZE, payload: value }
+}
+
+export const addToCart = (product, qty) => {
+  return {
+    type: ADD_TO_CART,
+    payload: {
+      ...product,
+      qty,
+    },
+  }
 }

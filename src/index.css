@@ -132,6 +132,11 @@ code {
   background-color: #fff;
   color: orangered;
 }
+
+.asd {
+  display: flex;
+  align-items: center;
+}
 /* .stock-btn {
   cursor: pointer;
   display: inline-block;
