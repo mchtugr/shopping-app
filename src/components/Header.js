@@ -1,8 +1,10 @@
 import React from 'react'
 import { LinkContainer } from 'react-router-bootstrap'
 import { Navbar, Nav, Container } from 'react-bootstrap'
+import { useSelector } from 'react-redux'
 
 const Header = () => {
+  const { cartItems } = useSelector((state) => state.cart)
   return (
     <Navbar bg='primary' variant='dark' expand='lg' collapseOnSelect>
       <Container>
@@ -29,7 +31,9 @@ const Header = () => {
                 {/* cart item number */}
                 {true && (
                   <div className='cart-item-number'>
-                    <div className='text-center align-middle'>1</div>
+                    <div className='text-center align-middle'>
+                      {cartItems.length}
+                    </div>
                   </div>
                 )}
                 <i
