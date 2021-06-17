@@ -56,12 +56,6 @@ code {
   color: orangered;
 }
 
-.sort-btn:focus {
-  box-shadow: none;
-  background-color: #fff;
-  color: orangered;
-}
-
 .product-card {
   border-color: #fff;
   display: grid;
