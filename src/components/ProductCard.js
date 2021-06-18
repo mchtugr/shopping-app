@@ -25,7 +25,6 @@ const ProductCard = ({ item }) => {
             <Link to={`/product/${item.id}`} className='product-link'>
               <Card.Img variant='top' src={img} className='p-3 d-block w-100' />
             </Link>
-            <Carousel.Caption />
           </Carousel.Item>
         ))}
       </Carousel>

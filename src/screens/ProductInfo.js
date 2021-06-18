@@ -13,6 +13,7 @@ const ProductInfo = ({ match, history }) => {
 
   const handleCartClick = () => {
     dispatch(addToCart(currentData, qty))
+    history.push('/')
   }
 
   const handleBuyNow = () => {

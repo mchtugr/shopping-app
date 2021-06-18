@@ -7,6 +7,7 @@ import {
   FILTER_PRODUCTS,
   REMOVE_BRAND_FILTER,
   REMOVE_CATEGORY_FILTER,
+  REMOVE_FROM_CART,
   REMOVE_PRICE_FILTER,
   SELECT_SORT_TYPE,
 } from '../constants'
@@ -72,5 +73,12 @@ export const addToCart = (product, qty) => {
       ...product,
       qty,
     },
+  }
+}
+
+export const removeFromCart = (product) => {
+  return {
+    type: REMOVE_FROM_CART,
+    payload: product,
   }
 }
