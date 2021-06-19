@@ -24,7 +24,7 @@ const SortingSettings = () => {
 
   return (
     <div className='demo my-4'>
-      <ButtonGroup className='mx-3'>
+      <ButtonGroup className='mx-3 sort-buttons'>
         <Button
           id='rating'
           type='button'
@@ -66,7 +66,7 @@ const SortingSettings = () => {
           Desc
         </Button>
       </ButtonGroup>
-      <ButtonGroup>
+      <ButtonGroup className='grid-col-size'>
         <Button
           type='button'
           variant='light'

@@ -26,13 +26,6 @@ export const addBrandFilter = (filter) => {
   }
 }
 
-export const addPriceFilter = (filter) => {
-  return {
-    type: ADD_PRICE_FILTER,
-    payload: filter,
-  }
-}
-
 export const removeCategoryFilter = (filter) => {
   return {
     type: REMOVE_CATEGORY_FILTER,
@@ -43,13 +36,6 @@ export const removeCategoryFilter = (filter) => {
 export const removeBrandFilter = (filter) => {
   return {
     type: REMOVE_BRAND_FILTER,
-    payload: filter,
-  }
-}
-
-export const removePriceFilter = (filter) => {
-  return {
-    type: REMOVE_PRICE_FILTER,
     payload: filter,
   }
 }
@@ -80,5 +66,34 @@ export const removeFromCart = (product) => {
   return {
     type: REMOVE_FROM_CART,
     payload: product,
+  }
+}
+
+export const applyFilter = () => (dispatch, getState) => {
+  const { list, brandFilter, categoryFilter } = getState().products
+  const categoryFilteredProducts = list.filter((item) =>
+    categoryFilter.includes(item.category)
+  )
+  const brandFilteredProducts = list.filter((item) =>
+    brandFilter.includes(item.brand)
+  )
+  //if there is only category filter
+  if (categoryFilter.length > 0 && brandFilter.length < 1) {
+    dispatch(filterProducts(categoryFilteredProducts))
+  }
+  // if there is only brand filter
+  else if (brandFilter.length > 0 && categoryFilter.length < 1) {
+    dispatch(filterProducts(brandFilteredProducts))
+  }
+  // if both filter is available
+  else if (categoryFilter.length > 0 && brandFilter.length > 0) {
+    const intersection = brandFilteredProducts.filter((item) =>
+      categoryFilteredProducts.includes(item)
+    )
+    dispatch(filterProducts(intersection))
+  }
+  // if no filter selected
+  else {
+    dispatch(filterProducts(list))
   }
 }

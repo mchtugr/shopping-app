@@ -31,13 +31,14 @@ code {
 }
 
 .filter-container {
+  z-index: 999;
   display: block;
   min-height: 90vh;
   width: 100%;
 }
 
 .filter-btn-container {
-  display: flex;
+  display: none;
   justify-content: center;
 }
 
@@ -136,6 +137,57 @@ code {
 .asd {
   display: flex;
   align-items: center;
+}
+
+.filter-display-container {
+  position: relative;
+  display: inline-block;
+}
+.filter-item {
+  display: inline-block;
+  position: relative;
+  margin-right: 7px;
+}
+.cross-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 15px;
+  height: 15px;
+  border-radius: 1px;
+}
+
+.toggle {
+  display: none;
+}
+
+@media (max-width: 992px) {
+  .demo {
+    display: grid;
+    grid-template-columns: auto;
+  }
+  .grid-col-size {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .filter-container {
+    min-height: 60vh;
+    position: absolute;
+    left: 0;
+    top: 55px;
+  }
+  .toggle {
+    display: block;
+  }
+  .filter-btn-container {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 /* .stock-btn {
