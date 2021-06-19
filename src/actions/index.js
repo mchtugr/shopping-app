@@ -1,14 +1,13 @@
 import {
   ADD_BRAND_FILTER,
   ADD_CATEGORY_FILTER,
-  ADD_PRICE_FILTER,
   ADD_TO_CART,
   CHANGE_COLUMN_SIZE,
+  CHANGE_PAGINATION,
   FILTER_PRODUCTS,
   REMOVE_BRAND_FILTER,
   REMOVE_CATEGORY_FILTER,
   REMOVE_FROM_CART,
-  REMOVE_PRICE_FILTER,
   SELECT_SORT_TYPE,
 } from '../constants'
 
@@ -96,4 +95,8 @@ export const applyFilter = () => (dispatch, getState) => {
   else {
     dispatch(filterProducts(list))
   }
+}
+
+export const changePagination = (page) => {
+  return { type: CHANGE_PAGINATION, payload: page }
 }

@@ -15,7 +15,11 @@ const ShippingDetail = ({ type }) => {
       )}{' '}
       <OverlayTrigger
         placement='top'
-        overlay={<Tooltip>arrives in 24h</Tooltip>}
+        overlay={
+          <Tooltip>
+            {type === 'fast' ? 'delivered in 24h' : 'delivered in 72h'}
+          </Tooltip>
+        }
       >
         <Button variant='light' className='shipping-tooltip'>
           ?

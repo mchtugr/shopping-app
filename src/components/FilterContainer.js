@@ -1,20 +1,18 @@
 import React, { useEffect } from 'react'
-import { Form, Button, ListGroup, Col, Row } from 'react-bootstrap'
+import { Form, Button, ListGroup } from 'react-bootstrap'
 import { useDispatch, useSelector } from 'react-redux'
 import {
   applyFilter,
   addBrandFilter,
   addCategoryFilter,
-  filterProducts,
   removeBrandFilter,
   removeCategoryFilter,
+  changePagination,
 } from '../actions'
 
 const FilterContainer = () => {
   // global redux state
-  const { list, brandFilter, categoryFilter } = useSelector(
-    (state) => state.products
-  )
+  const { brandFilter, categoryFilter } = useSelector((state) => state.products)
 
   // to use redux actions
   const dispatch = useDispatch()
@@ -23,6 +21,7 @@ const FilterContainer = () => {
     // to prevent default submit behavior
     e.preventDefault()
     dispatch(applyFilter())
+    dispatch(changePagination(1))
   }
   /*
   const applyFilter = () => {
@@ -60,6 +59,7 @@ const FilterContainer = () => {
       dispatch(removeCategoryFilter(e.target.id))
     }
     dispatch(applyFilter())
+    dispatch(changePagination(1))
   }
 
   const handleBrandChange = (e) => {
@@ -69,6 +69,7 @@ const FilterContainer = () => {
       dispatch(removeBrandFilter(e.target.id))
     }
     dispatch(applyFilter())
+    dispatch(changePagination(1))
   }
 
   useEffect(() => {
@@ -86,7 +87,7 @@ const FilterContainer = () => {
       <Form onSubmit={handleSubmit} as='form'>
         <ListGroup className='p-2'>
           <ListGroup.Item className='mt-1'>
-            <h3 className='text-center'>Category</h3>
+            <h3>Category</h3>
             <Form.Check
               type='checkbox'
               id='computer'
@@ -111,7 +112,7 @@ const FilterContainer = () => {
           </ListGroup.Item>
 
           <ListGroup.Item className='p-3'>
-            <h3 className='text-center'>Brand</h3>
+            <h3>Brand</h3>
             <Form.Check
               type='checkbox'
               id='Apple'
@@ -181,6 +182,7 @@ const FilterContainer = () => {
           <Button
             variant='primary'
             type='button'
+            className='m-auto mb-2 px-5 text-center'
             onClick={() => {
               if (window.innerWidth < 768) {
                 document.querySelector('.filter-container').style.display =

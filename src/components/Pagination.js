@@ -1,46 +1,65 @@
 import React from 'react'
+import { useSelector, useDispatch } from 'react-redux'
+import { Button } from 'react-bootstrap'
+import { changePagination } from '../actions'
 
 const Pagination = () => {
+  const { filteredProducts, pagination } = useSelector(
+    (state) => state.products
+  )
+  const { productsPerPage, currentPage } = pagination
+
+  const totalPageNumber = Math.ceil(filteredProducts.length / productsPerPage)
+
+  const dispatch = useDispatch()
+
+  const handleClick = (page) => {
+    dispatch(changePagination(page + 1))
+  }
+
+  const handlePrev = () => {
+    dispatch(changePagination(currentPage - 1))
+  }
+  const handleNext = () => {
+    dispatch(changePagination(currentPage + 1))
+  }
+
   return (
-    <div>
-      <ul className='pagination justify-content-center'>
-        <li className='page-item disabled'>
-          <a className='page-link' href='/'>
-            &laquo;
-          </a>
-        </li>
-        <li className='page-item active'>
-          <a className='page-link' href='/'>
-            1
-          </a>
-        </li>
-        <li className='page-item'>
-          <a className='page-link' href='/'>
-            2
-          </a>
-        </li>
-        <li className='page-item'>
-          <a className='page-link' href='/'>
-            3
-          </a>
-        </li>
-        <li className='page-item'>
-          <a className='page-link' href='/'>
-            4
-          </a>
-        </li>
-        <li className='page-item'>
-          <a className='page-link' href='/'>
-            5
-          </a>
-        </li>
-        <li className='page-item'>
-          <a className='page-link' href='/'>
-            &raquo;
-          </a>
-        </li>
-      </ul>
-    </div>
+    <>
+      {filteredProducts.length > 0 && (
+        <div>
+          <ul className='pagination justify-content-center'>
+            <li className={`page-item ${currentPage === 1 && 'disabled'}`}>
+              <Button className='page-link' onClick={handlePrev}>
+                &laquo;
+              </Button>
+            </li>
+            {[...Array(totalPageNumber).keys()].map((page) => (
+              <li className='page-item' key={page}>
+                <Button
+                  className={`page-link px-2 ${
+                    pagination.currentPage === page + 1 && 'active'
+                  }`}
+                  onClick={() => handleClick(page)}
+                  onMouseDown={(e) => e.preventDefault()}
+                >
+                  {page + 1}
+                </Button>
+              </li>
+            ))}
+            <li
+              className={`page-item ${
+                currentPage === totalPageNumber && 'disabled'
+              }`}
+            >
+              <Button className='page-link' onClick={handleNext}>
+                &raquo;
+              </Button>
+            </li>
+          </ul>
+        </div>
+      )}
+    </>
   )
 }
 

@@ -20,7 +20,7 @@ const SortingSettings = () => {
 
   useEffect(() => {
     dispatch(selectSortType(sortType))
-  }, [sortType])
+  }, [sortType, dispatch])
 
   return (
     <div className='demo my-4'>

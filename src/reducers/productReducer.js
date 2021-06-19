@@ -2,6 +2,7 @@ import {
   ADD_BRAND_FILTER,
   ADD_CATEGORY_FILTER,
   CHANGE_COLUMN_SIZE,
+  CHANGE_PAGINATION,
   FILTER_PRODUCTS,
   REMOVE_BRAND_FILTER,
   REMOVE_CATEGORY_FILTER,
@@ -14,8 +15,14 @@ const initialState = {
   categoryFilter: [],
   brandFilter: [],
   priceFilter: [],
+  sortType: '',
   filteredProducts: data,
   colSize: 3,
+  pagination: {
+    productsPerPage: 12,
+    currentPage: 1,
+    currentData: data.slice(0, 12),
+  },
 }
 
 const productReducer = (state = initialState, action) => {
@@ -43,6 +50,11 @@ const productReducer = (state = initialState, action) => {
       return { ...state, sortType: action.payload }
     case CHANGE_COLUMN_SIZE:
       return { ...state, colSize: action.payload }
+    case CHANGE_PAGINATION:
+      return {
+        ...state,
+        pagination: { ...state.pagination, currentPage: action.payload },
+      }
     default:
       return state
   }

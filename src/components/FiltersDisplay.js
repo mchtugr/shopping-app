@@ -20,25 +20,25 @@ const FiltersDisplay = () => {
   }
   return (
     <div>
-      {categoryFilter.map((x) => (
-        <div className='filter-display-container mt-3 mx-1 btn border'>
+      {categoryFilter.map((x, i) => (
+        <div className='filter-display-container mt-3 mx-1 btn border' key={i}>
           <span className='filter-item'>{x} </span>
           <span
             className='cross-container'
             onClick={() => handleCategoryRemove(x)}
           >
-            <i class='fas fa-times' style={{ color: '#999' }}></i>
+            <i className='fas fa-times' style={{ color: '#999' }}></i>
           </span>
         </div>
       ))}
-      {brandFilter.map((x) => (
-        <div className='filter-display-container mt-3 mx-1 btn border'>
+      {brandFilter.map((x, i) => (
+        <div className='filter-display-container mt-3 mx-1 btn border' key={i}>
           <span className='filter-item'>{x} </span>
           <span
             className='cross-container'
             onClick={() => handleBrandRemove(x)}
           >
-            <i class='fas fa-times' style={{ color: '#999' }}></i>
+            <i className='fas fa-times' style={{ color: '#999' }}></i>
           </span>
         </div>
       ))}
