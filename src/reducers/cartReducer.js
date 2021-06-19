@@ -1,7 +1,11 @@
 import { ADD_TO_CART, REMOVE_FROM_CART } from '../constants'
 
+const cartItemsFromStorage = localStorage.getItem('cartItems')
+  ? JSON.parse(localStorage.getItem('cartItems'))
+  : []
+
 const initialState = {
-  cartItems: [],
+  cartItems: cartItemsFromStorage,
 }
 
 const cartReducer = (state = initialState, action) => {
