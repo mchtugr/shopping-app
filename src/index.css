@@ -15,7 +15,7 @@ code {
 .nav-link {
   position: relative;
 }
-.cart-item-number {
+.cart-item-number-container {
   background-color: #fff;
   display: flex;
   align-items: center;
@@ -188,6 +188,10 @@ code {
     display: flex;
     justify-content: center;
   }
+}
+
+.success-message {
+  display: none;
 }
 
 /* .stock-btn {

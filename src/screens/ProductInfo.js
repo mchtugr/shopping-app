@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import { Row, Col, Carousel, Button, Form } from 'react-bootstrap'
+import { Row, Col, Carousel, Button, Form, Alert } from 'react-bootstrap'
 import Rating from '../components/Rating'
 import ShippingDetail from '../components/ShippingDetail'
 import { addToCart } from '../actions'
@@ -13,6 +13,10 @@ const ProductInfo = ({ match, history }) => {
 
   const handleCartClick = () => {
     dispatch(addToCart(currentData, qty))
+    document.querySelector('.success-message').style.display = 'block'
+    setTimeout(() => {
+      document.querySelector('.success-message').style.display = 'none'
+    }, 1000)
   }
 
   const handleBuyNow = () => {
@@ -77,6 +81,9 @@ const ProductInfo = ({ match, history }) => {
           <Button variant='success' className='m-4' onClick={handleBuyNow}>
             Buy Now
           </Button>
+          <Alert variant='success' className='success-message'>
+            Successfully added to Cart
+          </Alert>
         </div>
       </Col>
     </Row>

@@ -90,8 +90,9 @@ const Cart = () => {
             <ListGroup variant='flush'>
               <ListGroup.Item className='text-center'>
                 <h3>
-                  Subtotal ({cartItems.reduce((acc, item) => acc + item.qty, 0)}
-                  ) items
+                  Subtotal (
+                  {cartItems.reduce((acc, item) => acc + Number(item.qty), 0)})
+                  items
                 </h3>
                 $
                 {cartItems
