@@ -13,7 +13,7 @@ const Header = () => {
           <Navbar.Brand>
             <img
               alt=''
-              src='/cart.png'
+              src={`${process.env.PUBLIC_URL}/cart.png`}
               width='30'
               height='30'
               className='d-inline-block align-top'

@@ -176,6 +176,7 @@ code {
 
 @media (max-width: 768px) {
   .filter-container {
+    display: none;
     min-height: 60vh;
     position: absolute;
     left: 0;

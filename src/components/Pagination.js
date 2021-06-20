@@ -37,7 +37,7 @@ const Pagination = () => {
             {[...Array(totalPageNumber).keys()].map((page) => (
               <li className='page-item' key={page}>
                 <Button
-                  className={`page-link px-2 ${
+                  className={`page-link px-3 ${
                     pagination.currentPage === page + 1 && 'active'
                   }`}
                   onClick={() => handleClick(page)}

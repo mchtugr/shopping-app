@@ -37,7 +37,7 @@ const ProductInfo = ({ match, history }) => {
             <Carousel.Item key={index}>
               <img
                 variant='top'
-                src={img}
+                src={process.env.PUBLIC_URL + img}
                 className='p-3 d-block w-100'
                 alt={currentData.name}
               />
@@ -71,6 +71,9 @@ const ProductInfo = ({ match, history }) => {
             ></Form.Control>
           </Col>
         </Row>
+        <Alert variant='success' className='success-message mt-4 mb-0'>
+          Successfully added to Cart
+        </Alert>
         <div className='text-center'>
           <Button className='m-4' onClick={handleCartClick}>
             <span>
@@ -81,9 +84,6 @@ const ProductInfo = ({ match, history }) => {
           <Button variant='success' className='m-4' onClick={handleBuyNow}>
             Buy Now
           </Button>
-          <Alert variant='success' className='success-message'>
-            Successfully added to Cart
-          </Alert>
         </div>
       </Col>
     </Row>

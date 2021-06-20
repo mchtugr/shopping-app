@@ -74,10 +74,13 @@ const FilterContainer = () => {
 
   useEffect(() => {
     window.addEventListener('resize', function () {
-      if (window.innerWidth >= 768) {
-        document.querySelector('.filter-container').style.display = 'block'
-      } else {
-        document.querySelector('.filter-container').style.display = 'none'
+      const filterContainer = document.querySelector('.filter-container')
+      if (filterContainer) {
+        if (window.innerWidth >= 768) {
+          filterContainer.style.display = 'block'
+        } else {
+          filterContainer.style.display = 'none'
+        }
       }
     })
   }, [])

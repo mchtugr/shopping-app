@@ -23,7 +23,11 @@ const ProductCard = ({ item }) => {
         {item.image.map((img, index) => (
           <Carousel.Item key={index}>
             <Link to={`/product/${item.id}`} className='product-link'>
-              <Card.Img variant='top' src={img} className='p-3 d-block w-100' />
+              <Card.Img
+                variant='top'
+                src={process.env.PUBLIC_URL + img}
+                className='p-3 d-block w-100'
+              />
             </Link>
           </Carousel.Item>
         ))}

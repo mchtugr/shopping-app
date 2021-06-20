@@ -32,17 +32,22 @@ const Cart = () => {
               </Link>
             </div>
           )}
-          <ListGroup variant='flush'>
+          <ListGroup variant='flush' className='mb-3 border'>
             {cartItems.map((item) => (
               <ListGroup.Item key={item.id}>
-                <Row>
+                <Row className='d-flex align-items-center'>
                   {/* Product Image */}
-                  <Col md={2}>
-                    <Image src={item.image[0]} alt={item.name} fluid rounded />
+                  <Col md={2} xs={4}>
+                    <Image
+                      src={process.env.PUBLIC_URL + item.image[0]}
+                      alt={item.name}
+                      fluid
+                      rounded
+                    />
                   </Col>
 
                   {/* Product link & name */}
-                  <Col md={3}>
+                  <Col md={4} xs={5}>
                     <Link to={`/product/${item.id}`} className='product-link'>
                       {' '}
                       {item.name}{' '}
@@ -50,10 +55,12 @@ const Cart = () => {
                   </Col>
 
                   {/* Price */}
-                  <Col md={2}>${item.price}</Col>
+                  <Col md={2} xs={3}>
+                    ${item.price}
+                  </Col>
 
                   {/* Quantity Dropdown */}
-                  <Col md={2}>
+                  <Col md={2} xs={9} className='mt-3'>
                     <Form.Control
                       as='select'
                       value={item.qty}
@@ -71,7 +78,7 @@ const Cart = () => {
                   </Col>
 
                   {/* Delete Button */}
-                  <Col md={2}>
+                  <Col md={2} xs={3} className='mt-3'>
                     <Button
                       type='button'
                       variant='light'
@@ -85,25 +92,27 @@ const Cart = () => {
             ))}
           </ListGroup>
         </Col>
-        <Col md={4} className=''>
-          <Card>
+        <Col md={4}>
+          <Card className='p-3'>
             <ListGroup variant='flush'>
               <ListGroup.Item className='text-center'>
-                <h3>
+                <h3 className='my-3'>
                   Subtotal (
                   {cartItems.reduce((acc, item) => acc + Number(item.qty), 0)})
                   items
                 </h3>
-                $
-                {cartItems
-                  .reduce((acc, item) => acc + item.price * item.qty, 0)
-                  .toFixed(2)}
+                <p>
+                  $
+                  {cartItems
+                    .reduce((acc, item) => acc + item.price * item.qty, 0)
+                    .toFixed(2)}
+                </p>
               </ListGroup.Item>
               <ListGroup.Item className='d-grid'>
                 <Button
                   type='button'
                   disabled={cartItems.length === 0}
-                  onClick={console.log('checkout handled')}
+                  onClick={() => console.log('checkout handled')}
                 >
                   Proceed to Checkout
                 </Button>
