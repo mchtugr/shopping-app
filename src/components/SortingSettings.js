@@ -9,6 +9,7 @@ const SortingSettings = () => {
   const [sortType, setSortType] = useState('')
 
   const handleClick = (e) => {
+    //if sort type is the current one, deactivate it
     if (sortType === e.target.id) {
       setSortType('')
     } else {
@@ -16,6 +17,7 @@ const SortingSettings = () => {
     }
   }
 
+  // redux global state
   const colSize = useSelector((state) => state.products.colSize)
 
   useEffect(() => {
@@ -25,6 +27,7 @@ const SortingSettings = () => {
   return (
     <div className='demo my-4'>
       <ButtonGroup className='mx-3 sort-buttons'>
+        {/* Sort by Rating */}
         <Button
           id='rating'
           type='button'
@@ -35,6 +38,7 @@ const SortingSettings = () => {
         >
           Rating
         </Button>
+        {/* Sort by Review */}
         <Button
           id='review'
           type='button'
@@ -45,6 +49,7 @@ const SortingSettings = () => {
         >
           Review
         </Button>
+        {/* Sort by low to high */}
         <Button
           id='asc'
           type='button'
@@ -55,6 +60,7 @@ const SortingSettings = () => {
         >
           Asc
         </Button>
+        {/* Sort by high to low */}
         <Button
           id='desc'
           type='button'
@@ -66,7 +72,9 @@ const SortingSettings = () => {
           Desc
         </Button>
       </ButtonGroup>
+      {/* Column Size Setting --- available in large screens only */}
       <ButtonGroup className='grid-col-size'>
+        {/* 2 Column */}
         <Button
           type='button'
           variant='light'
@@ -78,6 +86,7 @@ const SortingSettings = () => {
             <i className='far fa-square'></i> <i className='far fa-square'></i>
           </div>
         </Button>
+        {/* 3 Column */}
         <Button
           type='button'
           variant='light'
@@ -90,6 +99,7 @@ const SortingSettings = () => {
             <i className='far fa-square'></i>
           </div>
         </Button>
+        {/* 4 Column */}
         <Button
           type='button'
           variant='light'

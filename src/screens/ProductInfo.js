@@ -24,7 +24,7 @@ const ProductInfo = ({ match, history }) => {
     history.push('/cart')
   }
   return (
-    <Row className='justify-content-around m-0'>
+    <Row className='justify-content-around m-0 mb-5'>
       <Col md={5}>
         <Carousel
           variant='light'
@@ -52,11 +52,8 @@ const ProductInfo = ({ match, history }) => {
           value={currentData.rating}
           numOfReviews={currentData.numOfReviews}
         />
-
         <p className='mt-3'>{currentData.description}</p>
-
         <ShippingDetail type={currentData.shippingType} />
-
         <Row className='mt-3 justify-content-center'>
           <Col xs={'auto'} className='p-1 text-center product-qty'>
             Quantity:
@@ -71,17 +68,17 @@ const ProductInfo = ({ match, history }) => {
             ></Form.Control>
           </Col>
         </Row>
-        <Alert variant='success' className='success-message mt-4 mb-0'>
+        <Alert variant='success' className='success-message mt-3'>
           Successfully added to Cart
         </Alert>
-        <div className='text-center'>
-          <Button className='m-4' onClick={handleCartClick}>
+        <div className='text-center mt-3'>
+          <Button className='mx-4' onClick={handleCartClick}>
             <span>
               <i className='fas fa-shopping-cart'></i>
             </span>{' '}
             Add to Cart
           </Button>
-          <Button variant='success' className='m-4' onClick={handleBuyNow}>
+          <Button variant='success' className='mx-4' onClick={handleBuyNow}>
             Buy Now
           </Button>
         </div>

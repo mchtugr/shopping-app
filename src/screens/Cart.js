@@ -15,6 +15,7 @@ import { Link } from 'react-router-dom'
 import { addToCart, removeFromCart } from '../actions'
 
 const Cart = () => {
+  // global redux state
   const { cartItems } = useSelector((state) => state.cart)
   const dispatch = useDispatch()
   return (
@@ -22,6 +23,7 @@ const Cart = () => {
       <h1 className='text-center m-3'>Shopping Cart</h1>
       <Row>
         <Col md={8}>
+          {/* when cart is empty */}
           {cartItems.length === 0 && (
             <div className='text-center m-3'>
               <Alert variant='danger' className='p-2'>
@@ -33,6 +35,7 @@ const Cart = () => {
             </div>
           )}
           <ListGroup variant='flush' className='mb-3 border'>
+            {/* maps cartItems */}
             {cartItems.map((item) => (
               <ListGroup.Item key={item.id}>
                 <Row className='d-flex align-items-center'>
@@ -93,6 +96,7 @@ const Cart = () => {
           </ListGroup>
         </Col>
         <Col md={4}>
+          {/* Cart Summary */}
           <Card className='p-3'>
             <ListGroup variant='flush'>
               <ListGroup.Item className='text-center'>

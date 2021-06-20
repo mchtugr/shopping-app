@@ -23,35 +23,7 @@ const FilterContainer = () => {
     dispatch(applyFilter())
     dispatch(changePagination(1))
   }
-  /*
-  const applyFilter = () => {
-    const categoryFilteredProducts = list.filter((item) =>
-      categoryFilter.includes(item.category)
-    )
-    const brandFilteredProducts = list.filter((item) =>
-      brandFilter.includes(item.brand)
-    )
-    //if there is only category filter
-    if (categoryFilter.length > 0 && brandFilter.length < 1) {
-      dispatch(filterProducts(categoryFilteredProducts))
-    }
-    // if there is only brand filter
-    else if (brandFilter.length > 0 && categoryFilter.length < 1) {
-      dispatch(filterProducts(brandFilteredProducts))
-    }
-    // if both filter is available
-    else if (categoryFilter.length > 0 && brandFilter.length > 0) {
-      const intersection = brandFilteredProducts.filter((item) =>
-        categoryFilteredProducts.includes(item)
-      )
-      dispatch(filterProducts(intersection))
-    }
-    // if no filter selected
-    else {
-      dispatch(filterProducts(list))
-    }
-  }
-*/
+
   const handleCategoryChange = (e) => {
     if (e.target.checked) {
       dispatch(addCategoryFilter(e.target.id))
@@ -59,6 +31,7 @@ const FilterContainer = () => {
       dispatch(removeCategoryFilter(e.target.id))
     }
     dispatch(applyFilter())
+    // when filter applied, pagination returns to initial state
     dispatch(changePagination(1))
   }
 
@@ -69,6 +42,7 @@ const FilterContainer = () => {
       dispatch(removeBrandFilter(e.target.id))
     }
     dispatch(applyFilter())
+    // when filter applied, pagination returns to initial state
     dispatch(changePagination(1))
   }
 
@@ -76,8 +50,10 @@ const FilterContainer = () => {
     window.addEventListener('resize', function () {
       const filterContainer = document.querySelector('.filter-container')
       if (filterContainer) {
+        //when window screen is bigger than 768px FilterContainer component displayed
         if (window.innerWidth >= 768) {
           filterContainer.style.display = 'block'
+          // if smaller than 768px, default display is 'none'
         } else {
           filterContainer.style.display = 'none'
         }
@@ -89,6 +65,7 @@ const FilterContainer = () => {
     <div className='bg-light filter-container'>
       <Form onSubmit={handleSubmit} as='form'>
         <ListGroup className='p-2'>
+          {/* Category Filter */}
           <ListGroup.Item className='mt-1'>
             <h3>Category</h3>
             <Form.Check
@@ -114,6 +91,7 @@ const FilterContainer = () => {
             />
           </ListGroup.Item>
 
+          {/* Brand Filter */}
           <ListGroup.Item className='p-3'>
             <h3>Brand</h3>
             <Form.Check
@@ -181,6 +159,8 @@ const FilterContainer = () => {
             />
           </ListGroup.Item>
         </ListGroup>
+
+        {/* this section is available when screen size is smaller than 768px */}
         <div className='filter-btn-container'>
           <Button
             variant='primary'

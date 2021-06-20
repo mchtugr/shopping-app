@@ -12,6 +12,7 @@ const ProductCard = ({ item }) => {
   }
   return (
     <Card className='h-100 product-card text-center demo1'>
+      {/* favourite icon */}
       <span onClick={handleClick} className='favorite-icon'>
         <i
           className={isFavorite ? 'fas fa-heart' : 'far fa-heart'}

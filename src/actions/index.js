@@ -59,6 +59,8 @@ export const addToCart = (product, qty) => (dispatch, getState) => {
       qty,
     },
   })
+
+  // save cartItems to localStorage
   localStorage.setItem('cartItems', JSON.stringify(getState().cart.cartItems))
 }
 
@@ -67,6 +69,7 @@ export const removeFromCart = (product) => (dispatch, getState) => {
     type: REMOVE_FROM_CART,
     payload: product,
   })
+  // save cartItems to localStorage
   localStorage.setItem('cartItems', JSON.stringify(getState().cart.cartItems))
 }
 

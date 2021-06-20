@@ -11,22 +11,28 @@ const ProductsShowroom = () => {
 
   switch (sortType) {
     case 'rating':
+      // sort by rating score
       filteredProducts.sort((a, b) => b.rating - a.rating)
       break
     case 'review':
+      // sort by review number
       filteredProducts.sort((a, b) => b.numOfReviews - a.numOfReviews)
       break
     case 'asc':
+      // sort by low to high
       filteredProducts.sort((a, b) => a.price - b.price)
       break
     case 'desc':
+      // sort by high to low
       filteredProducts.sort((a, b) => b.price - a.price)
       break
     default:
+      // sort by id
       filteredProducts.sort((a, b) => a.id - b.id)
       break
   }
 
+  // pagination logic
   const startIndex = (currentPage - 1) * productsPerPage
   const currentData = filteredProducts.slice(
     startIndex,

@@ -4,11 +4,15 @@ import { Button } from 'react-bootstrap'
 import { changePagination } from '../actions'
 
 const Pagination = () => {
+  // global redux state
   const { filteredProducts, pagination } = useSelector(
     (state) => state.products
   )
+
+  //pagination object destructure
   const { productsPerPage, currentPage } = pagination
 
+  //total pagination number
   const totalPageNumber = Math.ceil(filteredProducts.length / productsPerPage)
 
   const dispatch = useDispatch()
@@ -28,12 +32,15 @@ const Pagination = () => {
     <>
       {filteredProducts.length > 0 && (
         <div>
+          {/* prev button */}
           <ul className='pagination justify-content-center'>
             <li className={`page-item ${currentPage === 1 && 'disabled'}`}>
               <Button className='page-link' onClick={handlePrev}>
                 &laquo;
               </Button>
             </li>
+
+            {/* create a new array with array.length and maps it */}
             {[...Array(totalPageNumber).keys()].map((page) => (
               <li className='page-item' key={page}>
                 <Button
@@ -47,6 +54,7 @@ const Pagination = () => {
                 </Button>
               </li>
             ))}
+            {/* next button */}
             <li
               className={`page-item ${
                 currentPage === totalPageNumber && 'disabled'

@@ -13,6 +13,7 @@ const ShippingDetail = ({ type }) => {
           <i className='fas fa-truck'></i> Standard Shipping
         </span>
       )}{' '}
+      {/* displays extra info on hover */}
       <OverlayTrigger
         placement='top'
         overlay={

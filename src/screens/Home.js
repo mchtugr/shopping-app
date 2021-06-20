@@ -13,6 +13,7 @@ const Home = () => {
   return (
     <Row className='m-0'>
       <Col xl={2} md={3} className='p-0'>
+        {/* it is available when screen size is less than 768px, it opens FilterContainer component */}
         <Button
           className='toggle m-auto mt-2 px-5 text-center'
           onClick={handleClick}

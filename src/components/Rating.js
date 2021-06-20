@@ -3,6 +3,7 @@ import React from 'react'
 const Rating = ({ value, numOfReviews }) => {
   return (
     <div className='text-center'>
+      {/* first star */}
       <span>
         <i
           style={{ color: 'gold' }}
@@ -15,6 +16,7 @@ const Rating = ({ value, numOfReviews }) => {
           }
         ></i>
       </span>
+      {/* second star */}
       <span>
         <i
           style={{ color: 'gold' }}
@@ -27,6 +29,7 @@ const Rating = ({ value, numOfReviews }) => {
           }
         ></i>
       </span>
+      {/* third star */}
       <span>
         <i
           style={{ color: 'gold' }}
@@ -39,6 +42,7 @@ const Rating = ({ value, numOfReviews }) => {
           }
         ></i>
       </span>
+      {/* fourth star */}
       <span>
         <i
           style={{ color: 'gold' }}
@@ -51,6 +55,7 @@ const Rating = ({ value, numOfReviews }) => {
           }
         ></i>
       </span>
+      {/* fifth star */}
       <span>
         <i
           style={{ color: 'gold' }}
@@ -63,6 +68,7 @@ const Rating = ({ value, numOfReviews }) => {
           }
         ></i>
       </span>
+      {/* display review number */}
       <span className='text-secondary review-number'>
         {' '}
         {numOfReviews ? numOfReviews : 0}{' '}
