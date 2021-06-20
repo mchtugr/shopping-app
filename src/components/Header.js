@@ -31,7 +31,7 @@ const Header = () => {
                 {/* cart item number */}
                 {cartItems.length > 0 && (
                   <div className='cart-item-number-container'>
-                    <div className='text-center align-middle cart-item-number'>
+                    <div className='text-center cart-item-number'>
                       {cartItems.reduce(
                         (acc, item) => acc + Number(item.qty),
                         0

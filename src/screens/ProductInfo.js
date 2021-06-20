@@ -68,8 +68,11 @@ const ProductInfo = ({ match, history }) => {
             ></Form.Control>
           </Col>
         </Row>
-        <Alert variant='success' className='success-message mt-3'>
-          Successfully added to Cart
+        <Alert
+          variant='success'
+          className='success-message mt-3 p-1 text-center'
+        >
+          Successfully added to Cart!
         </Alert>
         <div className='text-center mt-3'>
           <Button className='mx-4' onClick={handleCartClick}>

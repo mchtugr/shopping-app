@@ -25,14 +25,14 @@ const SortingSettings = () => {
   }, [sortType, dispatch])
 
   return (
-    <div className='demo my-4'>
+    <div className='sorting-settings-container my-4'>
       <ButtonGroup className='mx-3 sort-buttons'>
         {/* Sort by Rating */}
         <Button
           id='rating'
           type='button'
           variant='light'
-          className={`sort-btn ${sortType === 'rating' && 'mesut'}`}
+          className={`sort-btn ${sortType === 'rating' && 'active-btn'}`}
           onClick={handleClick}
           onMouseDown={(e) => e.preventDefault()}
         >
@@ -43,7 +43,7 @@ const SortingSettings = () => {
           id='review'
           type='button'
           variant='light'
-          className={`sort-btn ${sortType === 'review' && 'mesut'}`}
+          className={`sort-btn ${sortType === 'review' && 'active-btn'}`}
           onClick={handleClick}
           onMouseDown={(e) => e.preventDefault()}
         >
@@ -54,7 +54,7 @@ const SortingSettings = () => {
           id='asc'
           type='button'
           variant='light'
-          className={`sort-btn ${sortType === 'asc' && 'mesut'}`}
+          className={`sort-btn ${sortType === 'asc' && 'active-btn'}`}
           onClick={handleClick}
           onMouseDown={(e) => e.preventDefault()}
         >
@@ -65,7 +65,7 @@ const SortingSettings = () => {
           id='desc'
           type='button'
           variant='light'
-          className={`sort-btn ${sortType === 'desc' && 'mesut'}`}
+          className={`sort-btn ${sortType === 'desc' && 'active-btn'}`}
           onClick={handleClick}
           onMouseDown={(e) => e.preventDefault()}
         >
@@ -78,7 +78,7 @@ const SortingSettings = () => {
         <Button
           type='button'
           variant='light'
-          className={`sort-btn ${colSize === 6 && 'mesut'}`}
+          className={`sort-btn ${colSize === 6 && 'active-btn'}`}
           onClick={() => dispatch(changeColSize(6))}
           onMouseDown={(e) => e.preventDefault()}
         >
@@ -90,7 +90,7 @@ const SortingSettings = () => {
         <Button
           type='button'
           variant='light'
-          className={`sort-btn ${colSize === 4 && 'mesut'}`}
+          className={`sort-btn ${colSize === 4 && 'active-btn'}`}
           onClick={() => dispatch(changeColSize(4))}
           onMouseDown={(e) => e.preventDefault()}
         >
@@ -103,7 +103,7 @@ const SortingSettings = () => {
         <Button
           type='button'
           variant='light'
-          className={`sort-btn ${colSize === 3 && 'mesut'}`}
+          className={`sort-btn ${colSize === 3 && 'active-btn'}`}
           onClick={() => dispatch(changeColSize(3))}
           onMouseDown={(e) => e.preventDefault()}
         >
