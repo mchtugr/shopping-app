@@ -169,7 +169,7 @@ code {
 
 /* RESPONSIVE */
 @media (max-width: 992px) {
-  .demo {
+  .sorting-settings-container {
     display: grid;
     grid-template-columns: auto;
   }
