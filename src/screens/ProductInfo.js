@@ -61,10 +61,8 @@ const ProductInfo = ({ match, history }) => {
           <Col xs={3}>
             <Form.Control
               as='select'
-              value={currentData.qty}
-              onChange={(e) =>
-                dispatch(addToCart(currentData, Number(e.target.value)))
-              }
+              value={qty}
+              onChange={(e) => setQty(e.target.value)}
             >
               {/* {[...Array(5).keys] -> returns [0,1,2,3,4]} */}
               {[...Array(currentData.countInStock).keys()].map((x) => (
