@@ -58,14 +58,21 @@ const ProductInfo = ({ match, history }) => {
           <Col xs={'auto'} className='p-1 text-center product-qty'>
             Quantity:
           </Col>
-          <Col xs={'auto'}>
+          <Col xs={3}>
             <Form.Control
-              type='number'
-              value={qty}
-              min='1'
-              max={currentData.countInStock}
-              onChange={(e) => setQty(e.target.value)}
-            ></Form.Control>
+              as='select'
+              value={currentData.qty}
+              onChange={(e) =>
+                dispatch(addToCart(currentData, Number(e.target.value)))
+              }
+            >
+              {/* {[...Array(5).keys] -> returns [0,1,2,3,4]} */}
+              {[...Array(currentData.countInStock).keys()].map((x) => (
+                <option key={x + 1} value={x + 1}>
+                  {x + 1}
+                </option>
+              ))}
+            </Form.Control>
           </Col>
         </Row>
         <Alert
