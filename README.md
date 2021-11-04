@@ -1,1 +1,1 @@
-# You can preview the app [here](https://murtazaaylak.github.io/shopping-app/).
+# You can preview the app [here](https://mchtugr.github.io/shopping-app/).
